@@ -1,0 +1,70 @@
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Meme Generator</h1>
+    <div class="box">
+
+        <div class="left">
+
+            <h3><i class="fa fa-commenting-o fa-fw" aria-hidden="true"></i>Meme Text</h3>
+            <div class="box">
+                <div>
+                    <p>Headline for Text Box</p>
+                    <input id="textTop" type="text" class="block" placeholder="Head text" maxlength="50">
+                </div><br>
+                <div>
+                    <p>Bodytext for Text Box</p>
+                    <input id="textBottom" type="text" class="block" placeholder="Body text" maxlength="200">
+                </div>
+            </div>
+            <h3><i class="fa fa-text-height fa-fw" aria-hidden="true"></i>Select Type</h3>
+            <div class="box">
+                <div>
+                    <select id="selectType">
+                        <option value="1">Style1</option>
+                        <option value="2">Style2</option>
+                    </select>
+                </div>
+            </div>
+            <h3><i class="fa fa-picture-o fa-fw" aria-hidden="true"></i>Load Picture</h3>
+            <div class="box">
+                <div>
+                    <p>From URL</p>
+                    <input id="imgURL" class="block" type="text" placeholder="Link to image">
+                </div>
+                <div>
+                    <p>From Local Disk</p>
+                    <input id="imgFile" type="file" accept="image/*">
+                    <label for="imgFile" class="btn"><i class="fa fa-upload fa-fw"></i></label>
+                </div>
+            </div>
+            <div class="box">
+                <input type="hidden" id="trueSize" type="checkbox">
+                <div>
+                    <h3><i class="fa fa-download fa-fw" aria-hidden="true"></i>Export</h3>
+                    <p>If the button doesn't work, right-click the image and save it</p>
+                    <p>If you are one mobile, download the source image and directly upload it</p>
+                    <button id="export">Export!</button>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div id="canvasWrapper">
+            </div>
+        </div>
+    </div>
+    <script id="rendered-js" src="api.js"></script>
+    <script id="rendered-js" src="script.js"></script>
+</body>
+
+</html>
